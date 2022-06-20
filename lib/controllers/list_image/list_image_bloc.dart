@@ -42,7 +42,14 @@ class ListImageBloc extends Bloc<ListImageEvent, ListImageState> {
           .then((value) => isLoadingMore = false);
       itemPage = event.perPage;
       final result = await repository.getImages(itemPage);
-      result.fold((failure) {}, (data) {
+      result.fold((failure) {
+        isLoadingMore = false;
+        emit(ListImageSuccess(
+          _isHorizontal,
+          isLoadingMore,
+          images: _images,
+        ));
+      }, (data) {
         _images.addAll(data);
         isLoadingMore = false;
         emit(ListImageSuccess(
