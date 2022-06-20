@@ -1,6 +1,5 @@
 import 'package:awesome_app/common/helper/failure.dart';
 import 'package:awesome_app/controllers/list_image/list_image_bloc.dart';
-import 'package:awesome_app/models/image_model.dart';
 import 'package:awesome_app/repositories/repository.dart';
 import 'package:bloc_test/bloc_test.dart';
 import 'package:dartz/dartz.dart';

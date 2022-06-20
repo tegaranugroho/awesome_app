@@ -1,10 +1,10 @@
 import 'package:awesome_app/controllers/list_image/list_image_bloc.dart';
-import 'package:awesome_app/models/image_model.dart';
 import 'package:awesome_app/views/home_page.dart';
 import 'package:bloc_test/bloc_test.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
+// ignore: depend_on_referenced_packages
 import 'package:mocktail/mocktail.dart';
 
 import '../dummy_data/dummy_object.dart';
