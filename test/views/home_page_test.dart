@@ -7,6 +7,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
 
+import '../dummy_data/dummy_object.dart';
+
 class MockListImageBloc extends MockBloc<ListImageEvent, ListImageState>
     implements ListImageBloc {}
 
@@ -25,7 +27,6 @@ void main() {
   setUp(() {
     mockPopularMoviesBloc = MockListImageBloc();
   });
-  List<ImageModel> testImageList = [];
 
   Widget _makeTestableWidget(Widget body) {
     return BlocProvider<ListImageBloc>.value(
